@@ -3,6 +3,7 @@
 @use 'shows';
 @use 'plans';
 @use 'available-devices';
+@use 'faq';
 
 @font-face {
     font-family: Avenir;
@@ -120,3 +121,12 @@ body {
         }
     }
 }
+
+// .bullet {
+//     background-color: variaveis.$corDeTextoPrincipal;
+//     border-radius: 50%;
+//     padding: 3.5px;
+//     margin: 0 15px 3px 24px;
+//     max-height: 100%;
+//     display: inline-block;
+// }

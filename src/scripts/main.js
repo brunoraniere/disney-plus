@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
             button.target.classList.add('shows__tabs__button--is-active');
         })
     }
+
+    $(document).ready(function() {
+        $('[data-faq-question]').on('click', function() {
+            const classe = 'faq__questions__item--is-open';
+
+            $(this).parent().find('.faq__questions__item__answer').slideToggle();
+            $(this).parent().toggleClass(classe);
+        });
+      });
 })
 
 function removeAllActiveButtons() {
