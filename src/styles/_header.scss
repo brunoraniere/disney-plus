@@ -1,0 +1,45 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    &--is-hidden {
+        .header {
+            &__logo, &__links__item:first-child {
+                transition: opacity 1s ease;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        max-width: 80px;
+        width: 100%;
+        transition: opacity 1s ease;
+    }
+
+    &__links {
+        display: flex;
+
+        &__item {
+            margin: 5px;
+            transition: opacity 1s ease;
+        }
+    }
+
+    .button {
+        height: 50px;
+    }
+}

@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
 
+    const heroSection = document.querySelector('.hero');
+    const heroHeight = heroSection.clientHeight;
+
+    verifyHeader(heroHeight);
+
+    window.addEventListener('scroll', function() {
+        verifyHeader(heroHeight);
+    });
+
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(button) {
             const tabTarget = button.target.dataset.tabButton;
@@ -21,8 +30,29 @@ document.addEventListener('DOMContentLoaded', function() {
             $(this).parent().find('.faq__questions__item__answer').slideToggle();
             $(this).parent().toggleClass(classe);
         });
-      });
+    });
 })
+
+function hideHeaderElements() {
+    const header = document.querySelector('.header');
+    header.classList.add('header--is-hidden');
+}
+
+function showHeaderElements() {
+    const header = document.querySelector('.header');
+    header.classList.remove('header--is-hidden');
+}
+
+function verifyHeader(heroHeight) {
+    const livePosition = window.scrollY;
+
+    if (livePosition < heroHeight) {
+        hideHeaderElements();
+    }
+    else {
+        showHeaderElements();
+    }
+}
 
 function removeAllActiveButtons() {
     const buttons = document.querySelectorAll('[data-tab-button]');
