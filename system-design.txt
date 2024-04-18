@@ -1,0 +1,62 @@
+.shows (várias imagens filme)
+ > media query celular grid temp col 2x 1fr
+ > media cel __button fontsize 16px;
+ > media cel __tabs whitespace nowrap; overflow-x scroll; overflox-x: hidden; padding left 20px
+
+.plans list
+ > media query celular
+  - display block
+
+main.scss image-text-sec
+ > media query celular display block
+
+main.scss __text_container
+ > media cel posi relative; left 0; width 100%
+
+devices __list
+ > media cel grid temp col 2x 1fr
+
+main.scss .title
+ > media cel .title @include title (24px)
+ > media cel .title--small @inc title(22px)
+ > media cel .title--large @inc title(26px)
+
+main.scss .text
+ > media cel .text--large @inc text(15px)
+ > media cel .text--small @inc text(11px)
+ > media cel .text @inc text(14px)
+
+hero.scss
+ > media cel __branding max wid 180px
+ > media cel .hero back-img url(hero_cel); margintop -55px; padding top calc(50vw + 25px); bg-size contain; bg repeat no repeat
+ > media cel __combos disp block
+ > media cel __combo wid 100%; margin bottom 24px
+
+header.scss
+ > media cel (768) .button fontsize 13px; padd 8 11px; height 40px lettspacing 0
+ > media cel __container padd 0 12 0 20px;
+ > media cel __logo maxwid 64px;
+
+plans.scss
+ > __list .button margin top 24px
+
+rei leao
+ > add tag picture
+	<source media="(maxwid 768)" srcset="fundo_rei_leao_cel.png">
+
+add real images
+------------------------------------------------------------------------
+set media queries for tablet and notebooks vision <--- First thing to do
+
+
+commit, subir github
+
+add uglify gulp
+create func
+  return gulp.src('./src/scripts/*.js).pipe(uglify()).pipe(gulp.dest('./dist/js'))
+add func to automation below
+change scripts to dist html
+gut push
+deploy vercel
+  npm run build vercel; output directory "."
+

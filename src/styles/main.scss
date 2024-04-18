@@ -45,26 +45,66 @@ body {
 
 .text--large {
     @include text(18px);
+
+    @media screen and (max-width: 767px) {
+        @include text(15px);
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1024px) {
+        @include text(16px)
+    }
 }
 
 .text {
     @include text;
+
+    @media screen and (max-width: 1024px) {
+        @include text(14px)
+    }
 }
 
 .text--small {
     @include text(12px);
+
+    @media screen and (max-width: 1024px) {
+        @include text(11px);
+    }
 }
 
 .title--large {
     @include title(44px);
+
+    @media screen and (max-width: 767px) {
+        @include title(26px);
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1024px) {
+        @include title(32px);
+    }
 }
 
 .title {
     @include title;
+
+    @media screen and (max-width: 767px) {
+        @include title(24px);
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1024px) {
+        @include title(28px)
+    }
 }
 
 .title--small {
     @include title(28px);
+
+    @media screen and (max-width: 767px) {
+        @include title(22px)
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1024px) {
+        @include title(24px)
+    }
 }
 
 .link-text {
@@ -120,12 +160,22 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+
     img {
         max-width: 100%;
     }
 
     &__text-container {
         padding: 2vw;
+
+        @media screen and (max-width: 767px) {
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
 
         h2 {
             margin-bottom: 24px;
@@ -145,6 +195,11 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            @media screen and (max-width: 767px) {
+                position: static;
+                width: 100%;
+            }
         }
         
         img {
@@ -152,6 +207,7 @@ body {
         }
     }
 }
+
 
 // .bullet {
 //     background-color: variaveis.$corDeTextoPrincipal;

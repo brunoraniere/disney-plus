@@ -11,19 +11,24 @@
         &__item {
             background-color: #13151d;
             margin-bottom: 16px;
-
+            position: relative;
+            
             &__question {
-                position: relative;
                 color: #f9f9f9;
                 font-size: 20px;
                 padding: 24px;
                 display: block;
                 cursor: pointer;
 
+                @media screen and (max-width: 767px) {
+                    font-size: 18px;
+                    max-width: 290px;
+                }
+
                 &::after {
                     content: '+';
                     position: absolute;
-                    top: 12%;
+                    top: 10px;
                     right: 24px;
                     height: 100%;
                     font-size: 40px;
@@ -58,7 +63,7 @@
             &--is-open {
                 .faq__questions__item__question::after {
                     content: '_';
-                    top: -11%;
+                    top: -10px;
                     right: 27px;
                     font-size: 41px;
                 }
